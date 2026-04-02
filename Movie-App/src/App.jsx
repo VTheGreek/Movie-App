@@ -1,13 +1,16 @@
-import { useState } from 'react'
-import MovieCard from "./components/MovieCard"
-import Home from "./pages/Home"
 import './App.css'
+import {Routes, Route} from 'react-router-dom'
+import Favorites from './pages/Favorites';
+import Home from "./pages/Home"
 
 function App() {
   return (
-    <>
-    <Home />
-    </>
+    <main className='main-content'>
+      <Routes>
+        <Route path="/" element=<Home /> />
+        <Route path="/Favorites" element=<Favorites /> />
+      </Routes>
+    </main>
   );
 }
 
